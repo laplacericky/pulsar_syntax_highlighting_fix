@@ -8,7 +8,7 @@
  * If you are unfamiliar with Less, you can read more about it here:
  * http://lesscss.org
  */
-
+@import "syntax-variables.less";
 
 /*
  * Examples
@@ -24,6 +24,21 @@
 atom-text-editor {
   // color: white;
   // background-color: hsl(180, 24%, 12%);
+
+  // fix python syntax highlighting in modern tree sitter implementation mode
+  .syntax--source.syntax--python {
+
+      .syntax--keyword.syntax--operator.syntax--accessor {
+          color: @syntax-text-color;
+      }
+      .syntax--variable.syntax--other.syntax--assignment {
+          color: @syntax-text-color;
+      }
+      .syntax--support.syntax--type.syntax--constructor{
+          color: @syntax-color-function;
+      }
+
+  }
 }
 
 // style UI elements inside atom-text-editor
