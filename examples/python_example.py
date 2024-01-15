@@ -40,7 +40,8 @@ def main():
     boo = True
     map(func, [1,2,3])
 
-
+    CONSTANT_LIKE = 3
+    bb = CONSTANT_LIKE
     ll = []
     dd = {}
     a = 3
